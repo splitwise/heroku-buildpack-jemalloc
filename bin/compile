@@ -6,6 +6,7 @@ set -e
 BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
+BIN_DIR=$(cd $(dirname $0); pwd)
 
 # Default version
 version="5.2.1"
@@ -49,6 +50,14 @@ function download_jemalloc() {
 
   if [[ $status -ge 300 ]]; then
     echo " !     jemalloc: Server returned HTTP $status"
+    exit 1
+  fi
+
+  # Check the SHA value to prevent supply chain attacks from replacing the jemalloc executable
+  cp "$BIN_DIR/sha/$STACK/jemalloc-$version.tar.bz2.sha" /tmp/jemalloc.tar.bz2.sha
+  (cd /tmp; sha1sum -c jemalloc.tar.bz2.sha)
+  if [ $? != 0 ]; then
+    echo " !     jemalloc: Downloaded file failed SHA check"
     exit 1
   fi
 
