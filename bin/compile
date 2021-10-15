@@ -54,8 +54,8 @@ function download_jemalloc() {
   fi
 
   # Check the SHA value to prevent supply chain attacks from replacing the jemalloc executable
-  cp "$BIN_DIR/sha/$STACK/jemalloc-$version.tar.bz2.sha" /tmp/jemalloc.tar.bz2.sha
-  (cd /tmp; sha1sum -c jemalloc.tar.bz2.sha)
+  cp "$BIN_DIR/sha256/$STACK/jemalloc-$version.tar.bz2.sha" /tmp/jemalloc.tar.bz2.sha
+  (cd /tmp; sha256sum -c jemalloc.tar.bz2.sha)
   if [ $? != 0 ]; then
     echo " !     jemalloc: Downloaded file failed SHA check"
     exit 1
