@@ -115,9 +115,6 @@ heroku config:set JEMALLOC_VERSION=3.6.0
 | [5.2.1](https://github.com/jemalloc/jemalloc/releases/tag/5.2.1) | 2019-08-05 |
 | [5.3.0](https://github.com/jemalloc/jemalloc/releases/tag/5.3.0) | 2022-05-06 |
 
-The complete and most up to date list of supported versions and stacks is
-available on the [releases page.](https://github.com/gaffneyc/heroku-buildpack-jemalloc/releases)
-
 ## Development
 
 Run `make console` to start up a shell in a test build environment that mimic's
