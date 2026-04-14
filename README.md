@@ -114,6 +114,7 @@ heroku config:set JEMALLOC_VERSION=3.6.0
 | [5.2.0](https://github.com/jemalloc/jemalloc/releases/tag/5.2.0) | 2019-04-02 |
 | [5.2.1](https://github.com/jemalloc/jemalloc/releases/tag/5.2.1) | 2019-08-05 |
 | [5.3.0](https://github.com/jemalloc/jemalloc/releases/tag/5.3.0) | 2022-05-06 |
+| [5.3.1](https://github.com/jemalloc/jemalloc/releases/tag/5.3.1) | 2026-04-13 |
 
 ## Development
 
