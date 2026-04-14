@@ -16,7 +16,7 @@ console:
 	@echo "Console Help"
 	@echo
 	@echo "Specify a version to install:"
-	@echo "    echo 5.2.1 > /env/JEMALLOC_VERSION"
+	@echo "    echo 5.2.1 > /tmp/build/env/JEMALLOC_VERSION"
 	@echo
 	@echo "To vendor jemalloc:"
 	@echo "    bin/compile /tmp/build/{app,cache,env}"
